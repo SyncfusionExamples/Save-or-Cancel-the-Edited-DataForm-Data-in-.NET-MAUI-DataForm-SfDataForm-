@@ -3,7 +3,7 @@ This repository contain a sample of how to Save or Cancel the Edited DataForm Da
 
 Please refer the KB through this link.
 
-# Syncfusion controls
+## Syncfusion controls
 
 This project used the following Syncfusion control(s):
 * [SfDataForm](https://www.syncfusion.com/maui-controls/maui-dataform)
