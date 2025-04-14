@@ -9,6 +9,7 @@ namespace SaveDataForm
             this.Name = string.Empty;
             this.Email = string.Empty;
             this.FeedBack = string.Empty;
+            this.EventName = string.Empty;
         }
 
         [Display(Name = "Name", Prompt = "Enter your name")]
