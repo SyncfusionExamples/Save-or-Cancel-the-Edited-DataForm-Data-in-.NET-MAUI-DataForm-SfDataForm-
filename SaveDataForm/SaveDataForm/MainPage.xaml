@@ -4,28 +4,29 @@
              xmlns:local="clr-namespace:SaveDataForm"
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
              xmlns:thickness ="clr-namespace:Microsoft.Maui;assembly=Microsoft.Maui"
+             x:DataType="local:DataFormViewModel"
              x:Class="SaveDataForm.MainPage">
 
     <Grid>
-        <Frame BorderColor="{OnIdiom Default=Transparent, Desktop=#C2C2C2}"
-                   HasShadow="False" BackgroundColor="{OnIdiom Default=White, Desktop=WhiteSmoke}"
-                    CornerRadius="10"
+        <Border 
+                    BackgroundColor="{OnIdiom Default=White, Desktop=WhiteSmoke}"
+                    
                     MaximumHeightRequest="{OnIdiom Desktop=640}"
                     VerticalOptions="{OnIdiom Default=Fill, Desktop=Center}"
                     HorizontalOptions="{OnIdiom Desktop=Center, Default=Fill}" 
                    WidthRequest="{OnPlatform MacCatalyst=600, WinUI=450, Default=-1}">
-            <Frame.Padding>
+            <Border.Padding>
                 <OnPlatform x:TypeArguments="thickness:Thickness">
                     <On Platform="MacCatalyst" Value="22, 15, 20, 30"/>
                     <On Platform="WinUI" Value="22, 10, 20, 0"/>
                 </OnPlatform>
-            </Frame.Padding>
-            <Frame.Margin>
+            </Border.Padding>
+            <Border.Margin>
                 <OnPlatform x:TypeArguments="thickness:Thickness">
                     <On Platform="WinUI" Value="0, 20"/>
                     <On Platform="MacCatalyst" Value="0, 5"/>
                 </OnPlatform>
-            </Frame.Margin>
+            </Border.Margin>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="{OnIdiom Default=0, Desktop=40}"/>
@@ -69,7 +70,7 @@
                     HeightRequest="40"/>
                 </HorizontalStackLayout>
             </Grid>
-        </Frame>
+        </Border>
     </Grid>
     <ContentPage.Behaviors>
         <local:DataFormBehavior/>
